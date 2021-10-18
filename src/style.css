@@ -16,3 +16,12 @@
 * {
   background: black;
 }
+
+#nav {
+  height: 240px;
+  grid-template-columns: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 4px;
+  display: grid;
+  background-color:antiquewhite;
+}
