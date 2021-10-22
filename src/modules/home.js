@@ -1,5 +1,6 @@
 import Pizzeria from '../pizza.jpeg'
 import loadAbout from './about.js'
+import loadContact from './contact.js'
 const content = document.querySelector('#content');
 
 
@@ -46,6 +47,7 @@ function createNav () {
 
   home.addEventListener('click', loadHome);
   about.addEventListener('click', loadAbout);
+  contact.addEventListener('click', loadContact)
 
   //im going to have to import the loadabout/loadcontact modules and addeventlistener here too
 

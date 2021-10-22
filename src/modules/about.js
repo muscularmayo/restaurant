@@ -18,7 +18,7 @@ function createBody() {
   const charlie = document.createElement('p');
   const dennis = document.createElement('p');
 
-  mac.innerHTML = `Ronald "Mac" MacDonald: Co-owner and bouncer/bodyguard/ocular inspector of Paddy's Pub`
+  mac.innerHTML = `Ronald "Mac" MacDonald: Co-owner/bouncer/bodyguard/ocular inspector of Paddy's Pub`
   mac.classList.add('copy')
   mac.classList.add('mac')
 
@@ -50,7 +50,7 @@ function createBody() {
 function bicepImage() {
   const bicep = new Image()
   bicep.src = Bicep;
-  bicep.classList.add('bicep')
+  bicep.setAttribute('id','bicep')
   bicep.classList.add('pizza')
 
   return bicep;
@@ -59,7 +59,7 @@ function bicepImage() {
 function macImage() {
   const mac = new Image();
   mac.src = Mac;
-  mac.classList.add('mac');
+  mac.setAttribute('id','mac');
   mac.classList.add('portrait')
 
   return mac;
@@ -68,7 +68,7 @@ function macImage() {
 function charlieImage() {
   const charlie = new Image();
   charlie.src = Charlie;
-  charlie.classList.add('charlie')
+  charlie.setAttribute('id','charlie')
   charlie.classList.add('portrait')
 
   return charlie;
@@ -77,7 +77,7 @@ function charlieImage() {
 function dennisImage() {
   const dennis = new Image();
   dennis.src = Dennis;
-  dennis.classList.add('dennis')
+  dennis.setAttribute('id', 'dennis')
   dennis.classList.add('portrait')
 
   return dennis;
@@ -96,10 +96,13 @@ function loadAbout() {
   homeModule.base();
   const bicep = bicepImage();
   const body = createBody();
+  const footer = homeModule.createFooter()
+  footer.removeAttribute('id');
+  footer.setAttribute('id', 'aboutFooter')
   content.appendChild(bicep)
   content.appendChild(body);
 
-  content.appendChild(homeModule.createFooter())
+  content.appendChild(footer)
 
 
 
