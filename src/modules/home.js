@@ -112,5 +112,5 @@ function clearContent() {
   }
 }
 
-const homeModule = {loadHome, clearContent, createFooter, createNav, createButton, createHeader, base,}
+const homeModule = {loadHome, clearContent, createFooter, createNav, createButton, createHeader, base}
 export default homeModule;
